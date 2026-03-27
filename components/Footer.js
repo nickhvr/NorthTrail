@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site';
 
@@ -20,6 +22,20 @@ export default function Footer() {
           <p><Link href="/privacy-policy">Privacy Policy</Link></p>
           <p><Link href="/cookies">Cookies</Link></p>
           <p><Link href="/impressum">Impressum</Link></p>
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new Event('open-cookie-settings'))}
+            style={{
+              background: 'none',
+              border: 'none',
+              padding: 0,
+              cursor: 'pointer',
+              textDecoration: 'underline',
+              color: 'inherit'
+            }}
+          >
+            Cookie-Einstellungen
+        </button>
         </div>
       </div>
       <div className="container footer-bottom">© 2026 {siteConfig.name}. All rights reserved.</div>

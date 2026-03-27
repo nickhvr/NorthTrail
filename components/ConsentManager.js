@@ -3,10 +3,19 @@
 import { useEffect, useState } from 'react';
 import TagManager from '@/components/TagManager';
 
-const STORAGE_KEY = 'tn_cookie_consent_v1';
+const STORAGE_KEY = 'tn_consent_v2';
+
+const DEFAULT_CONSENT = {
+  necessary: true,
+  analytics: false,
+  marketing: false,
+  version: 2,
+  updatedAt: null
+};
 
 export default function ConsentManager() {
-  const [consent, setConsent] = useState(null);
+
+  const [consent, setConsent] = useState(DEFAULT_CONSENT);
   const [showBanner, setShowBanner] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [analytics, setAnalytics] = useState(false);
@@ -22,7 +31,7 @@ export default function ConsentManager() {
 
     try {
       const parsed = JSON.parse(saved);
-      setConsent(parsed);
+      setConsent(DEFAULT_CONSENT, parsed);
       setAnalytics(!!parsed.analytics);
       setMarketing(!!parsed.marketing);
       setShowBanner(false);
@@ -31,19 +40,37 @@ export default function ConsentManager() {
     }
   }, []);
 
-  function saveConsent(nextConsent) {
-    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(nextConsent));
-    setConsent(nextConsent);
-    setAnalytics(!!nextConsent.analytics);
-    setMarketing(!!nextConsent.marketing);
-    setShowBanner(false);
-    window.dispatchEvent(new Event('consent-updated'));
-  }
+  useEffect(() => {
+  const openSettings = () => {
+    setShowBanner(true);
+    setSettingsOpen(true);
+  };
+
+  window.addEventListener('open-cookie-settings', openSettings);
+
+  return () => {
+    window.removeEventListener('open-cookie-settings', openSettings);
+  };
+}, []);
+
+function saveConsent(nextConsent) {
+  const normalized = {
+    necessary: true,
+    analytics: !!nextConsent.analytics,
+    marketing: !!nextConsent.marketing,
+    version: 2,
+    updatedAt: new Date().toISOString()
+  };
+
+  setConsent(normalized);
+  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(normalized));
+  window.dispatchEvent(new Event('consent-updated'));
+  setShowBanner(false);
+  setSettingsOpen(false);
+}
 
   return (
     <>
-      <TagManager consent={consent} />
-
       {showBanner ? (
         <div className="cookie-banner">
           <div className="container cookie-inner">
@@ -97,7 +124,7 @@ export default function ConsentManager() {
                 className="btn secondary"
                 onClick={() => saveConsent({ analytics: false, marketing: false })}
               >
-                Reject non-essential
+                Alle Ablehnen
               </button>
 
               <button
@@ -111,19 +138,20 @@ export default function ConsentManager() {
                 className="btn"
                 onClick={() => saveConsent({ analytics, marketing })}
               >
-                Save selection
+                Auswahl speichern
               </button>
 
               <button
                 className="btn"
                 onClick={() => saveConsent({ analytics: true, marketing: true })}
               >
-                Accept all
+                Alle akzeptieren
               </button>
             </div>
           </div>
         </div>
       ) : null}
+      <TagManager consent={consent} />
     </>
   );
 }
