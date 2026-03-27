@@ -19,6 +19,7 @@ export default function HikingPillarPage() {
         title="Angeln"
         text="Dies ist die Hauptseite zum Thema Angeln. Hier findest du die Einleitung zum Thema Angeln und die neusten Posts!."
         image="/images/hero-hiking-pillar.svg"
+        priority={true}
         breadcrumbs={
   <Breadcrumbs
     items={[

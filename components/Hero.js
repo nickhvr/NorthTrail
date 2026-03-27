@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Hero({ kicker, title, text, image, actions, breadcrumbs }) {
+export default function Hero({ kicker, title, text, image, actions, breadcrumbs, priority=false }) {
   return (
     <section className="hero">
       <div className="container hero-grid">
@@ -20,11 +20,18 @@ export default function Hero({ kicker, title, text, image, actions, breadcrumbs 
           <Image
             src={image}
             alt={title}
-            width={1536}
-            height={1024}
-            priority
-            sizes="(max-width: 960px) 100vw, 50vw"
-            style={{ borderRadius: "22px", minHeight: "320px", objectFit: "cover" }}
+            width={640}
+            height={420}
+            priority={priority}
+            sizes="(max-width: 960px) 100vw, 40vw"
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "420px",
+              objectFit: "cover",
+              borderRadius: "22px",
+              display: "block"
+            }}
           />
         </div>
       </div>
