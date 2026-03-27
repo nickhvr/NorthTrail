@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#30553a"/><stop offset="100%" stop-color="#b7cf8a"/></linearGradient></defs>
+    <rect width="1600" height="900" fill="url(#g)"/>
+    <circle cx="1260" cy="180" r="120" fill="rgba(255,255,255,0.18)"/>
+    <path d="M0 700 L320 420 L520 600 L770 300 L1030 610 L1260 380 L1600 760 L1600 900 L0 900 Z" fill="rgba(255,255,255,0.16)"/>
+    <path d="M0 770 L220 540 L430 700 L720 390 L960 690 L1220 470 L1600 820 L1600 900 L0 900 Z" fill="rgba(16,21,16,0.20)"/>
+    <text x="90" y="150" font-size="74" font-family="Arial, sans-serif" font-weight="700" fill="white">Hero hiking pillar</text>
+    <text x="90" y="230" font-size="34" font-family="Arial, sans-serif" fill="rgba(255,255,255,0.85)">Replace this placeholder with your final image file.</text>
+    </svg>
