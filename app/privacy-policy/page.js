@@ -2,8 +2,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { siteConfig } from '@/lib/site';
 
 export const metadata = {
-  title: 'Privacy Policy | TrailNorth',
-  description: 'Privacy policy template'
+  title: 'Datenschutz | TrailNorth',
+  description: 'Datenschutzseite von TrailNorth'
 };
 
 export default function PrivacyPolicyPage() {
@@ -17,7 +17,6 @@ export default function PrivacyPolicyPage() {
       <div className="legal">
           <p className="section-kicker">Legal</p>
           <h1 className="section-title">Privacy Policy</h1>
-          <p>This template must be reviewed and adapted before you publish the website.</p>
           <h2>1. Controller</h2>
           <p>{siteConfig.legalName}<br />{siteConfig.address}<br />{siteConfig.email}</p>
           <h2>2. Hosting and logs</h2>

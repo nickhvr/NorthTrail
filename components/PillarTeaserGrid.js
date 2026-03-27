@@ -5,20 +5,19 @@ export default function PillarTeaserGrid() {
   const pillars = getPillarSummaries().slice(0, 3);
 
   return (
-    <section className="section" style={{ paddingTop: 0 }}>
+    <section className="section" style={{ paddingTop: 10 }}>
       <div className="container">
         <p className="section-kicker">Themen</p>
-        <h2 className="section-title">Explore by topic</h2>
+        <h2 className="section-title">Erkunde nach Themen</h2>
         <p className="section-copy">
-          Start with the main topic hubs. Each pillar page introduces a subject and
-          automatically leads visitors into the matching articles.
+          Schaue dir das Thema an, was dir gefällt und finde all unsere Beiträge zu diesem Thema.
         </p>
 
         <div className="pillar-teaser-grid">
           {pillars.map((pillar) => (
             <Link
               key={pillar.slug}
-              href={`/${pillar.slug}`}
+              href={`/blog/${pillar.slug}`}
               className="pillar-teaser-card"
             >
               <div className="pillar-teaser-media">

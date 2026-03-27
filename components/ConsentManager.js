@@ -77,9 +77,7 @@ function saveConsent(nextConsent) {
             <div>
               <h3>Cookies & tracking</h3>
               <p>
-                We use necessary technologies for core functionality. Analytics and
-                marketing tools such as Google Tag Manager and Google Analytics 4
-                are only activated after your consent.
+                Wir nutzen die nötige technologie für die hauptfunktion der Seite. Analytics und Marketing Werkzeuge wie Google Tag Manager und Google Analytics 4 werden erst nach Ihrer Zustimmung aktiviert.
               </p>
 
               {settingsOpen ? (
@@ -87,15 +85,15 @@ function saveConsent(nextConsent) {
                   <label className="cookie-option">
                     <span>
                       <strong>Necessary</strong>
-                      <small>Required for the website to work.</small>
+                      <small>Erforderlich für die Funktion der Seite.</small>
                     </span>
-                    <span>Always active</span>
+                    <span>Immer aktiv</span>
                   </label>
 
                   <label className="cookie-option">
                     <span>
                       <strong>Analytics</strong>
-                      <small>Enable GA4 measurement after consent.</small>
+                      <small>Ermögliche GA4 Messungen mit deiner Zustimmung.</small>
                     </span>
                     <input
                       type="checkbox"
@@ -107,7 +105,7 @@ function saveConsent(nextConsent) {
                   <label className="cookie-option">
                     <span>
                       <strong>Marketing</strong>
-                      <small>Enable advertising-related Google signals after consent.</small>
+                      <small>Ermögliche werbeverwandte Google Signale nach deiner Zustimmung.</small>
                     </span>
                     <input
                       type="checkbox"

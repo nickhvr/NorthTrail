@@ -15,11 +15,13 @@ export default function Footer() {
           <strong>Navigation</strong>
           <p><Link href="/">Home</Link></p>
           <p><Link href="/blog">Blog</Link></p>
-          <p><Link href="/hiking">Hiking</Link></p>
+          <p><Link href="blog/wandern">Wandern</Link></p>
+          <p><Link href='/blog/angeln'>Angeln</Link></p>
+          <p><Link href='/blog/camping'>Camping</Link></p>
         </div>
         <div>
           <strong>Legal</strong>
-          <p><Link href="/privacy-policy">Privacy Policy</Link></p>
+          <p><Link href="/privacy-policy">Datenschutzerklärung</Link></p>
           <p><Link href="/cookies">Cookies</Link></p>
           <p><Link href="/impressum">Impressum</Link></p>
           <button
@@ -38,7 +40,7 @@ export default function Footer() {
         </button>
         </div>
       </div>
-      <div className="container footer-bottom">© 2026 {siteConfig.name}. All rights reserved.</div>
+      <div className="container footer-bottom">© 2026 {siteConfig.name}. Alle Rechte vorbehalten.</div>
     </footer>
   );
 }

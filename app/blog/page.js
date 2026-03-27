@@ -6,7 +6,7 @@ import PillarTeaserGrid from '@/components/PillarTeaserGrid';
 
 export const metadata = {
   title: 'Blog | TrailNorth',
-  description: 'All blog articles'
+  description: 'Alle Blog Artikel zu den Themen Angeln, Wandern und (wild) Camping auf einen Blick'
 };
 
 export default function BlogIndexPage() {
@@ -15,9 +15,9 @@ export default function BlogIndexPage() {
   return (
     <>
       <Hero
-        kicker="Main blog page"
-        title="All blog articles"
-        text="This page automatically reads all posts from the content/blog folder and displays the teaser image, title and introduction text defined inside each original blog post file."
+        kicker="Blog Hauptseite"
+        title="Alle Blog Artikel"
+        text="Willkommen im NorthTrail Blog. Hier findest du fundierte Guides, ehrliche Erfahrungen und praktische Tipps rund um Outdoor-Abenteuer. Egal ob Wandern, Angeln oder Camping. Wir zeigen dir, worauf es wirklich ankommt, damit du draußen besser vorbereitet bist und mehr aus deinen Touren herausholst."
         image="/images/hero-home-outdoor.svg"
         priority= {true}
         breadcrumbs={
@@ -32,7 +32,13 @@ export default function BlogIndexPage() {
       <PillarTeaserGrid />
       <main className="section">
         <div className="container">
+          <p className="section-kicker">Beiträge</p>
+          <h2 className="section-title">Hier findest du alle Beiträge</h2>
+          <p className="section-copy">
+            Einfach durch stöbern und finden was einen interessiert.
+          </p>
           <div className="grid-3">
+
             {posts.map((post) => (
               <PostCard key={post.url} post={post} />
             ))}

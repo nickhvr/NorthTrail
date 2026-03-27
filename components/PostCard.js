@@ -28,7 +28,7 @@ export default function PostCard({ post }) {
         <p>{post.excerpt}</p>
         <div style={{ marginTop: 16 }}>
           <Link className="btn secondary" href={post.url}>
-            Read article
+            Beitrag lesen
           </Link>
         </div>
       </div>

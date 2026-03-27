@@ -6,19 +6,19 @@ import { getPostsByPillar } from '@/lib/posts';
 
 export const metadata = {
   title: 'Angeln | TrailNorth',
-  description: 'Angeln pillar page'
+  description: 'Die Hauptseite für das Thema Angeln. Hier findest du all unsere Beiträge, die sich mit diesem Thema beschäftigen.'
 };
 
 export default function HikingPillarPage() {
-  const posts = getPostsByPillar('fishing');
+  const posts = getPostsByPillar('angeln');
 
   return (
     <>
       <Hero
-        kicker="Pillar page"
+        kicker="Themen Seite"
         title="Angeln"
         text="Dies ist die Hauptseite zum Thema Angeln. Hier findest du die Einleitung zum Thema Angeln und die neusten Posts!."
-        image="/images/hero-hiking-pillar.svg"
+        image="/images/hero-angeln-pillar.svg"
         priority={true}
         breadcrumbs={
   <Breadcrumbs
@@ -29,7 +29,7 @@ export default function HikingPillarPage() {
     ]}
   />
 }
-        actions={<Link href="/blog" className="btn">View all posts</Link>}
+        actions={<Link href="/blog" className="btn">Alle Beiträge anschauen</Link>}
       />
       <main className="section">
         <div className="container">

@@ -17,7 +17,6 @@ export default function ImpressumPage() {
         <div className="legal">
           <p className="section-kicker">Legal</p>
           <h1 className="section-title">Impressum</h1>
-          <p>Replace the following placeholders before going live.</p>
           <h2>Angaben</h2>
           <p>{siteConfig.legalName}<br />{siteConfig.address}</p>
           <h2>Kontakt</h2>

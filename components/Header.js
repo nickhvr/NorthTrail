@@ -26,10 +26,11 @@ export default function Header() {
         </Link>
 
         <nav className="nav-links nav-links-desktop">
+          <Link href="/" className={isActive('/') ? 'active' : ''}>Home</Link>
           <Link href="/blog" className={isActive('/blog') ? 'active' : ''}>Blog</Link>
-          <Link href="/privacy-policy" className={isActive('/privacy-policy') ? 'active' : ''}>Privacy</Link>
-          <Link href="/cookies" className={isActive('/cookies') ? 'active' : ''}>Cookies</Link>
+          <Link href="/privacy-policy" className={isActive('/privacy-policy') ? 'active' : ''}>Datenschutz</Link>
           <Link href="/impressum" className={isActive('/impressum') ? 'active' : ''}>Impressum</Link>
+          <Link href="/cookies" className={isActive('/cookies') ? 'active' : ''}>Cookies</Link>
         </nav>
 
         <button
@@ -60,15 +61,7 @@ export default function Header() {
               className={isActive('/privacy-policy') ? 'active' : ''}
               onClick={() => setMenuOpen(false)}
             >
-              Privacy
-            </Link>
-
-            <Link
-              href="/cookies"
-              className={isActive('/cookies') ? 'active' : ''}
-              onClick={() => setMenuOpen(false)}
-            >
-              Cookies
+              Datenschutz
             </Link>
 
             <Link
@@ -77,6 +70,14 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
             >
               Impressum
+            </Link>
+
+            <Link
+              href="/cookies"
+              className={isActive('/cookies') ? 'active' : ''}
+              onClick={() => setMenuOpen(false)}
+            >
+              Cookies
             </Link>
           </div>
         </div>

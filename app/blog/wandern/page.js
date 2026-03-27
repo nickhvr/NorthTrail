@@ -5,12 +5,12 @@ import PostCard from '@/components/PostCard';
 import { getPostsByPillar } from '@/lib/posts';
 
 export const metadata = {
-  title: 'Hiking | TrailNorth',
-  description: 'Hiking pillar page'
+  title: 'Wandern | TrailNorth',
+  description: 'Die Hauptseite für das Thema Wandern. Hier findest du all unsere Beiträge, die sich mit diesem Thema beschäftigen.'
 };
 
 export default function HikingPillarPage() {
-  const posts = getPostsByPillar('hiking');
+  const posts = getPostsByPillar('wandern');
 
   return (
     <>
@@ -18,7 +18,7 @@ export default function HikingPillarPage() {
         kicker="Pillar page"
         title="Hiking"
         text="This is the topic hub for hiking. It can contain broader evergreen content at the top and automatically list the newest related subpages below."
-        image="/images/hero-hiking-pillar.svg"
+        image="/images/hero-wandern-pillar.svg"
         priority={true}
         breadcrumbs={
   <Breadcrumbs
