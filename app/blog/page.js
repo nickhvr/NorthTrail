@@ -3,6 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import PostCard from '@/components/PostCard';
 import { getAllPosts } from '@/lib/posts';
 import PillarTeaserGrid from '@/components/PillarTeaserGrid';
+import {imageConfig} from '@/lib/image'
 
 export const metadata = {
   title: 'Blog | TrailNorth',
@@ -18,7 +19,7 @@ export default function BlogIndexPage() {
         kicker="Blog Hauptseite"
         title="Alle Blog Artikel"
         text="Willkommen im NorthTrail Blog. Hier findest du fundierte Guides, ehrliche Erfahrungen und praktische Tipps rund um Outdoor-Abenteuer. Egal ob Wandern, Angeln oder Camping. Wir zeigen dir, worauf es wirklich ankommt, damit du draußen besser vorbereitet bist und mehr aus deinen Touren herausholst."
-        image="/images/hero-home-outdoor.svg"
+        image={imageConfig.blog}
         priority= {true}
         breadcrumbs={
           <Breadcrumbs

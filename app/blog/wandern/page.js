@@ -3,6 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Hero from '@/components/Hero';
 import PostCard from '@/components/PostCard';
 import { getPostsByPillar } from '@/lib/posts';
+import { imageConfig } from '@/lib/image';
 
 export const metadata = {
   title: 'Wandern | TrailNorth',
@@ -18,7 +19,7 @@ export default function HikingPillarPage() {
         kicker="Pillar page"
         title="Hiking"
         text="This is the topic hub for hiking. It can contain broader evergreen content at the top and automatically list the newest related subpages below."
-        image="/images/hero-wandern-pillar.svg"
+        image={imageConfig.wandern}
         priority={true}
         breadcrumbs={
   <Breadcrumbs

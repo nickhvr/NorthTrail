@@ -3,6 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import Hero from '@/components/Hero';
 import PostCard from '@/components/PostCard';
 import { getPostsByPillar } from '@/lib/posts';
+import { imageConfig } from '@/lib/image';
 
 export const metadata = {
   title: 'Angeln | TrailNorth',
@@ -18,7 +19,7 @@ export default function HikingPillarPage() {
         kicker="Themen Seite"
         title="Angeln"
         text="Dies ist die Hauptseite zum Thema Angeln. Hier findest du die Einleitung zum Thema Angeln und die neusten Posts!."
-        image="/images/hero-angeln-pillar.svg"
+        image={imageConfig.angeln}
         priority={true}
         breadcrumbs={
   <Breadcrumbs

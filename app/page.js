@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Hero from '@/components/Hero';
 import PostCard from '@/components/PostCard';
 import { getAllPosts, getPillarSummaries } from '@/lib/posts';
-import { siteConfig } from '@/lib/site';
+import { imageConfig } from '@/lib/image';
 
 export default function HomePage() {
   const latestPosts = getAllPosts().slice(0, 3);
@@ -14,7 +14,7 @@ export default function HomePage() {
         kicker="Alles was du wissen musst!"
         title="Dein Outdoor Blog"
         text="Draußen sein ist einfach. Aber es wirklich zu genießen, braucht oft ein bisschen Erfahrung. Genau dabei hilft dir dieser Blog. Hier teilen wir Wissen aus der Praxis, vermeiden typische Anfängerfehler und geben dir konkrete Tipps für Wandern, Angeln und Camping."
-        image={siteConfig.heroImage}
+        image={imageConfig.home}
         actions={
           <>
             <Link href="/blog" className="btn">Erkunde den Blog</Link>

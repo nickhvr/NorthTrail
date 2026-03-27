@@ -34,7 +34,7 @@ export default function BlogPostPage({ params }) {
       items={[
         { label: 'Home', href: '/' },
         { label: 'Blog', href: '/blog' },
-        { label: post.pillar.charAt(0).toUpperCase() + post.pillar.slice(1), href: `/${post.pillar}` },
+        { label: post.pillar.charAt(0).toUpperCase() + post.pillar.slice(1), href: `/blog/${post.pillar}` },
         { label: post.title }
       ]}
     />
