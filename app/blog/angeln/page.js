@@ -18,7 +18,7 @@ export default function HikingPillarPage() {
       <Hero
         kicker="Themen Seite"
         title="Angeln"
-        text="Dies ist die Hauptseite zum Thema Angeln. Hier findest du die Einleitung zum Thema Angeln und die neusten Posts!."
+        text="Dies ist die Hauptseite zum Thema Angeln. Hier findest du die Einleitung zum Thema Angeln und die neusten Posts!"
         image={imageConfig.angeln}
         priority={true}
         breadcrumbs={

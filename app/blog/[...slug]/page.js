@@ -49,7 +49,7 @@ export default function BlogPostPage({ params }) {
             {post.readTime ? <span>{post.readTime}</span> : null}
           </div>
           <h1 className="page-title" style={{fontSize:'clamp(34px,5vw,56px)', marginBottom: 12}}>{post.title}</h1>
-          <p className="muted" style={{marginTop:0}}>By {post.author || 'TrailNorth Editorial'}</p>
+          <p className="muted" style={{marginTop:0}}>Von {post.author || 'TrailNorth Editorial'}</p>
           <div className="article-content">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
           </div>

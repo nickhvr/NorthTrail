@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site';
+import { imageConfig } from '@/lib/image';
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +20,15 @@ export default function Header() {
     <header className="site-header">
       <div className="container nav">
         <Link href="/" className="brand" onClick={() => setMenuOpen(false)}>
-          <span className="brand-mark">TN</span>
+          <span className="brand-mark"><Image
+                      src={imageConfig.logo}
+                      alt='TrailNorth Logo'
+                      width={60}
+                      height={60}
+                      priority={true}
+                      sizes="(max-width: 960px) 100vw, 40vw"
+                    />
+          </span>
           <span>
             <strong>{siteConfig.name}</strong>
             <small>{siteConfig.tagline}</small>

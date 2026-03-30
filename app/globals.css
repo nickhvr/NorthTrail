@@ -186,10 +186,18 @@ button { font: inherit; }
 }
 
 .brand-mark {
-  width: 44px;
-  height: 44px;
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+
+.brand-mark {
+  width: 60px;
+  height: 60px;
   border-radius: 14px;
-  background: var(--brand);
+  /*background: var(--brand);*/
+  background-color: white;
   color: white;
   display: grid;
   place-items: center;
