@@ -651,6 +651,111 @@ button { font: inherit; }
   box-shadow: 0 18px 46px rgba(17, 24, 39, 0.18);
 }
 
+/* =========================
+   Affiliate Inline Link
+========================= */
+
+.affiliate-link {
+  color: #2e7d32;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+.affiliate-link:hover {
+  color: #1b5e20;
+  text-decoration: none;
+}
+
+/* =========================
+   Affiliate Box
+========================= */
+
+.affiliate-box {
+  margin: 32px 0;
+  border: 1px solid #d9e2d3;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #f8fbf7 0%, #f3f6f1 100%);
+  overflow: hidden;
+}
+
+.affiliate-box-inner {
+  padding: 22px 24px;
+}
+
+.affiliate-box-label {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(46, 125, 50, 0.10);
+  color: #2e7d32;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.affiliate-box-main {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.affiliate-box-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.affiliate-box-title {
+  margin: 0 0 8px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+
+.affiliate-box-description {
+  margin: 0;
+  max-width: 58ch;
+  color: #4d5a50;
+  line-height: 1.6;
+}
+
+.affiliate-box-action {
+  flex-shrink: 0;
+}
+
+.affiliate-box-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 10px;
+  background: #2f6b2f;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.affiliate-box-button:hover {
+  background: #255625;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(47, 107, 47, 0.18);
+}
+
+@media (max-width: 760px) {
+  .affiliate-box-main {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .affiliate-box-button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .pillar-teaser-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));

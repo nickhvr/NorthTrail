@@ -1,9 +1,13 @@
-import { notFound } from 'next/navigation';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import { MDXRemote } from 'next-mdx-remote/rsc';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { getAllPosts, getPostBySlugSegments } from '@/lib/posts';
 import Hero from '@/components/Hero';
+import {AffiliateBox, AffiliateLink} from '@/components/AffiliateComponents';
+
+const components = {
+  AffiliateBox,
+  AffiliateLink,
+};
 
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.pathParts }));
@@ -12,9 +16,10 @@ export function generateStaticParams() {
 export function generateMetadata({ params }) {
   const post = getPostBySlugSegments(params.slug);
   if (!post) return {};
+
   return {
     title: `${post.title} | TrailNorth`,
-    description: post.excerpt
+    description: post.excerpt,
   };
 }
 
@@ -50,10 +55,10 @@ export default function BlogPostPage({ params }) {
           </div>
           <h1 className="page-title" style={{fontSize:'clamp(34px,5vw,56px)', marginBottom: 12}}>{post.title}</h1>
           <p className="muted" style={{marginTop:0}}>Von {post.author || 'TrailNorth Editorial'}</p>
-          <div className="article-content">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
-          </div>
-        </article>
+        <div className='article-content'>
+          <MDXRemote source={post.content} components={components} />
+        </div>
+      </article>
       </div>
     </main>
     </>
