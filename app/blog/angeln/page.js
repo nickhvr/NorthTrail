@@ -4,10 +4,11 @@ import Hero from '@/components/Hero';
 import PostCard from '@/components/PostCard';
 import { getPostsByPillar } from '@/lib/posts';
 import { imageConfig } from '@/lib/image';
+import { pillarConfig } from '@/lib/pillar';
 
 export const metadata = {
-  title: 'Angeln | TrailNorth',
-  description: 'Die Hauptseite für das Thema Angeln. Hier findest du all unsere Beiträge, die sich mit diesem Thema beschäftigen.'
+  title: pillarConfig.angeln.title + ' | TrailNorth',
+  description: pillarConfig.angeln.description
 };
 
 export default function HikingPillarPage() {

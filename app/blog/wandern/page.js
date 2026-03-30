@@ -4,10 +4,11 @@ import Hero from '@/components/Hero';
 import PostCard from '@/components/PostCard';
 import { getPostsByPillar } from '@/lib/posts';
 import { imageConfig } from '@/lib/image';
+import { pillarConfig } from '@/lib/pillar';
 
 export const metadata = {
-  title: 'Wandern | TrailNorth',
-  description: 'Die Hauptseite für das Thema Wandern. Hier findest du all unsere Beiträge, die sich mit diesem Thema beschäftigen.'
+  title: pillarConfig.wandern.title + ' | TrailNorth',
+  description: pillarConfig.wandern.description
 };
 
 export default function HikingPillarPage() {
