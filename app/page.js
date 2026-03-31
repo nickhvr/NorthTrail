@@ -18,12 +18,9 @@ export default function HomePage() {
         actions={
           <>
             <Link href="/blog" className="btn">Erkunde den Blog</Link>
-            <Link href="#newposts" className="btn secondary" style={{color:'white', borderColor:'rgba(255,255,255,0.25)'}} onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('newposts')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
+            <Link href="#newposts" className="btn secondary" style={{color:'white', borderColor:'rgba(255,255,255,0.25)'}}>
             Neuste Posts</Link>
-          </>
+            </>
         }
       />
 
@@ -69,9 +66,10 @@ export default function HomePage() {
         <div className="container">
           <p className="section-kicker">Neuste Beiträge</p>
           <h2 className="section-title">Die neusten Beiträge - Auf einen Blick</h2>
-          <div id='newposts'/>
+          <div id='newposts'>
           <div className="grid-3">
             {latestPosts.map((post) => <PostCard key={post.url} post={post} />)}
+          </div>
           </div>
         </div>
       </section>
