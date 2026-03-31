@@ -1,5 +1,0 @@
-{
-  "prompt": "Eine geheimnisvolle Waldlandschaft mit einem schmalen Pfad, der sich durch dichte Bäume windet. Im Hintergrund ein sonnendurchfluteter Lichtpunkt, der den Pfad erhellt. Die Szene ist in einer modernen, künstlerischen Art gestaltet und sollte eine starke Komposition aufweisen.",
-  "negative_prompt": "Menschen, Gesichter, Hände, Personen im Vordergrund, Logos, Wasserzeichen, Text",
-  "filename_base": "geheimnisvoller_waldweg"
-}
