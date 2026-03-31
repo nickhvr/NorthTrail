@@ -1,0 +1,5 @@
+{
+  "prompt": "Ein Bergpfad bei Nacht mit einem schmalen Pfad, der sich durch dichte Bäume windet. Im Hintergrund ein dunkles Tal mit einem sternenklaren Himmel. Die Lichter einer entfernten Stadt leuchten schwach im Tal unten. Der Schatten des Waldes fällt auf den Pfad und gibt ihm einen kontrastreichen Look.",
+  "negative_prompt": "Menschen, Gesichter, Hände, Personen im Vordergrund, Logos, Wasserzeichen, Text",
+  "filename_base": "Wandern bei Nacht_Sicherheit und Vorbereitung"
+}
