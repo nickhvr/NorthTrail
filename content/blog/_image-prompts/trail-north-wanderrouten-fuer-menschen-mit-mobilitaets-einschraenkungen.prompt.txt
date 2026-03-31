@@ -1,0 +1,5 @@
+{
+  "prompt": "Eine moderne Wanderroute mit einem breiten, asphaltierten Pfad, der durch ein ländliches Gebiet führt. Im Hintergrund ragt eine Bergkette auf und fällt in die Ferne ab. Der Himmel ist wolkenlos und strahlt einen warmen Sonnenlicht aus, das den gesamten Bildbereich erhellt.",
+  "negative_prompt": "Menschen, Gesichter, Hände, Personen im Vordergrund, Logos, Wasserzeichen, Text",
+  "filename_base": "trail-north-wanderrouten-fuer-menschen-mit-mobilitaets-einschraenkungen"
+}
