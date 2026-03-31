@@ -4,3 +4,4 @@ node_modules
 .env.local
 trailnorth_system_overview.txt
 rules_blog_creation.txt
+\content\blog\_image-prompts
