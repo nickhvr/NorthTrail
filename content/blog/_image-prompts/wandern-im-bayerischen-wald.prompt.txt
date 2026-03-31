@@ -1,0 +1,5 @@
+{
+  "prompt": "Ein Bild von einem weitläufigen Waldweg im Bayerischen Wald, der sich durch eine grüne Landschaft windet. Im Hintergrund ragt ein Felsmassiv auf, das von einer Sonnenpartie beleuchtet wird. Der Weg ist leer und führt in die Tiefe des Waldes. Die Lichtverhältnisse sind natürlich und abwechslungsreich.",
+  "negative_prompt": "Menschen, Gesichter, Hände, Personen im Vordergrund, Logos, Wasserzeichen, Text",
+  "filename_base": "wandern-im-bayerischen-wald"
+}
