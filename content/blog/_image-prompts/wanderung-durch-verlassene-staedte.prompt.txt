@@ -1,0 +1,5 @@
+{
+  "prompt": "Eine hochauflösende, editorial Hero-Bildaufnahme einer verlassenen Stadt mit einem starken Fokus auf die Architektur und Geschichte der Ruinen. Zeige eine Szene, in der sich die Betrachterin/die Betrachter durch ein verwahrlostes, aber noch immer majestätisches Gebäude bewegen, wie z.B. einen verlassenen Palast oder ein ehemaliges Rathaus. Die Kamera sollte von oben auf den Hauptzugang des Gebäudes aus fotografiert werden, mit einem starken Schatten, der die Ruinen in Szene setzt. Die Farben sollten kalt und melancholisch sein, um das Gefühl der Verlassenheit und Vergänglichkeit zu unterstreichen.",
+  "negative_prompt": "Menschen, Gesichter, Hände, Personen im Vordergrund, Logos, Wasserzeichen, Text im Bild",
+  "filename_base": "wanderung-durch-verlassene-staedte"
+}
