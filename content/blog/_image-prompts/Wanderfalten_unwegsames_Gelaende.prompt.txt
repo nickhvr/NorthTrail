@@ -1,0 +1,5 @@
+{
+  "prompt": "Eine moderne, sachliche Hero-Bildszene mit einem Wanderer inmitten einer unwegsamen Landschaft. Im Vordergrund ein Bergpfad mit Steinen und Felsen, im Hintergrund eine weite Ebene mit wechselnden Wolken. Der Wanderer ist nicht zu sehen, aber seine Ausrüstung wie Rucksack, Stöcke und Gummistiefel sind auf dem Pfad verteilt. Das Licht ist stark und dynamisch, mit hohen Kontrasten zwischen Schatten und Helligkeit. Die Komposition ist starke und technisch passend.",
+  "negative_prompt": "Menschen, Gesichter, Hände, Personen im Vordergrund, Logos, Wasserzeichen, Text",
+  "filename_base": "Wanderfalten_unwegsames_Gelaende"
+}
