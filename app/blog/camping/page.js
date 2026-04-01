@@ -5,41 +5,60 @@ import PostCard from '@/components/PostCard';
 import { getPostsByPillar } from '@/lib/posts';
 import { imageConfig } from '@/lib/image';
 import { siteConfig } from '@/lib/site';
+import { pillarConfig } from '@/lib/pillar';
 
 export const metadata = {
-  title: 'Camping | ' + siteConfig.name,
-  description: 'Die Hauptseite für das Thema Camping. Hier findest du all unsere Beiträge, die sich mit diesem Thema beschäftigen.'
+  title: pillarConfig.camping.title + ' | ' + siteConfig.name,
+  description: pillarConfig.camping.description
 };
 
-export default function HikingPillarPage() {
+export default function CampingPillarPage() {
   const posts = getPostsByPillar('camping');
 
   return (
     <>
       <Hero
-        kicker="Pillar page"
+        kicker="Themenwelt"
         title="Camping"
-        text="This is the topic hub for hiking. It can contain broader evergreen content at the top and automatically list the newest related subpages below."
+        text="Hier findest du hilfreiche Tipps, praktische Ratgeber und inspirierende Ideen rund um Camping, Ausrüstung, Zelte, Packlisten und unvergessliche Outdoor-Abenteuer."
         image={imageConfig.camping}
         priority={true}
         breadcrumbs={
-  <Breadcrumbs
-    items={[
-      { label: 'Home', href: '/' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Camping' }
-    ]}
-  />
-}
-        actions={<Link href="/blog" className="btn">View all posts</Link>}
+          <Breadcrumbs
+            items={[
+              { label: 'Startseite', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'Camping' }
+            ]}
+          />
+        }
+        actions={
+          <Link href="/blog" className="btn">
+            Alle Beiträge ansehen
+          </Link>
+        }
       />
+
       <main className="section">
         <div className="container">
-          <p className="section-kicker">Topic overview</p>
-          <h1 className="page-title" style={{fontSize:'clamp(34px,5vw,56px)', marginBottom: 10}}>Hiking guides and latest subpages</h1>
-          <p className="section-copy">Each new post placed inside the hiking section appears here automatically, ordered by date. That is the core pillar-page logic you asked for.</p>
+          <p className="section-kicker">Camping entdecken</p>
+          <h1
+            className="page-title"
+            style={{ fontSize: 'clamp(34px,5vw,56px)', marginBottom: 10 }}
+          >
+            Camping-Tipps, Ausrüstung und hilfreiche Ratgeber
+          </h1>
+          <p className="section-copy">
+            Ob du ein Wochenende auf dem Zeltplatz planst, mit dem Van unterwegs
+            bist oder dein nächstes Outdoor-Abenteuer vorbereitest: Hier findest du
+            fundierte Beiträge zu Campingausrüstung, Zelten, Packlisten, Komfort in
+            der Natur und praktischen Tipps für Einsteiger und erfahrene Camper.
+          </p>
+
           <div className="grid-2">
-            {posts.map((post) => <PostCard key={post.url} post={post} />)}
+            {posts.map((post) => (
+              <PostCard key={post.url} post={post} />
+            ))}
           </div>
         </div>
       </main>

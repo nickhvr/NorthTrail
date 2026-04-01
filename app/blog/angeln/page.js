@@ -12,6 +12,60 @@ export const metadata = {
   description: pillarConfig.angeln.description
 };
 
+export default function FishingPillarPage() {
+  const posts = getPostsByPillar('angeln');
+
+  return (
+    <>
+      <Hero
+        kicker="Themenwelt"
+        title="Angeln"
+        text="Hier findest du hilfreiche Tipps, praktische Ratgeber und spannende Beiträge rund um Angeltechniken, Ausrüstung, Köderwahl und erfolgreiche Tage am Wasser."
+        image={imageConfig.angeln}
+        priority={true}
+        breadcrumbs={
+          <Breadcrumbs
+            items={[
+              { label: 'Startseite', href: '/' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'Angeln' }
+            ]}
+          />
+        }
+        actions={
+          <Link href="/blog" className="btn">
+            Alle Beiträge ansehen
+          </Link>
+        }
+      />
+
+      <main className="section">
+        <div className="container">
+          <p className="section-kicker">Angeln entdecken</p>
+          <h1
+            className="page-title"
+            style={{ fontSize: 'clamp(34px,5vw,56px)', marginBottom: 10 }}
+          >
+            Angeltipps, Ausrüstung und Ratgeber für erfolgreiche Stunden am Wasser
+          </h1>
+          <p className="section-copy">
+            Ob du gerade mit dem Angeln beginnst oder bereits Erfahrung am Wasser
+            gesammelt hast: Hier findest du Beiträge zu Angelmethoden, passender
+            Ausrüstung, Ködern, Gewässerwissen und praktischen Tipps für deinen
+            nächsten Angelausflug.
+          </p>
+
+          <div className="grid-2">
+            {posts.map((post) => (
+              <PostCard key={post.url} post={post} />
+            ))}
+          </div>
+        </div>
+      </main>
+    </>
+  );
+}
+
 export default function HikingPillarPage() {
   const posts = getPostsByPillar('angeln');
 
