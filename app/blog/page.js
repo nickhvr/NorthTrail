@@ -4,9 +4,10 @@ import PostCard from '@/components/PostCard';
 import { getAllPosts } from '@/lib/posts';
 import PillarTeaserGrid from '@/components/PillarTeaserGrid';
 import {imageConfig} from '@/lib/image'
+import { siteConfig } from '@/lib/site';
 
 export const metadata = {
-  title: 'Blog | TrailNorth',
+  title: 'Blog | ' + siteConfig.name,
   description: 'Alle Blog Artikel zu den Themen Angeln, Wandern und (wild) Camping auf einen Blick'
 };
 
@@ -18,7 +19,7 @@ export default function BlogIndexPage() {
       <Hero
         kicker="Blog Hauptseite"
         title="Alle Blog Artikel"
-        text="Willkommen im NorthTrail Blog. Hier findest du fundierte Guides, ehrliche Erfahrungen und praktische Tipps rund um Outdoor-Abenteuer. Egal ob Wandern, Angeln oder Camping. Wir zeigen dir, worauf es wirklich ankommt, damit du draußen besser vorbereitet bist und mehr aus deinen Touren herausholst."
+        text="Willkommen im OutdoorEinfach Blog. Hier findest du fundierte Guides, ehrliche Erfahrungen und praktische Tipps rund um Outdoor-Abenteuer. Egal ob Wandern, Angeln oder Camping. Wir zeigen dir, worauf es wirklich ankommt, damit du draußen besser vorbereitet bist und mehr aus deinen Touren herausholst."
         image={imageConfig.blog}
         priority= {true}
         breadcrumbs={

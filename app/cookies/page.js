@@ -1,7 +1,8 @@
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { siteConfig } from '@/lib/site';
 
 export const metadata = {
-  title: 'Cookies | TrailNorth',
+  title: 'Cookies | ' + siteConfig.name,
   description: 'Cookie information page'
 };
 

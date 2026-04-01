@@ -4,9 +4,10 @@ import Hero from '@/components/Hero';
 import PostCard from '@/components/PostCard';
 import { getPostsByPillar } from '@/lib/posts';
 import { imageConfig } from '@/lib/image';
+import { siteConfig } from '@/lib/site';
 
 export const metadata = {
-  title: 'Camping | TrailNorth',
+  title: 'Camping | ' + siteConfig.name,
   description: 'Die Hauptseite für das Thema Camping. Hier findest du all unsere Beiträge, die sich mit diesem Thema beschäftigen.'
 };
 

@@ -5,9 +5,10 @@ import PostCard from '@/components/PostCard';
 import { getPostsByPillar } from '@/lib/posts';
 import { imageConfig } from '@/lib/image';
 import { pillarConfig } from '@/lib/pillar';
+import { siteConfig } from '@/lib/site';
 
 export const metadata = {
-  title: pillarConfig.angeln.title + ' | TrailNorth',
+  title: pillarConfig.angeln.title + ' | ' + siteConfig.name,
   description: pillarConfig.angeln.description
 };
 

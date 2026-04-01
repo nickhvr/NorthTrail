@@ -2,8 +2,8 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { siteConfig } from '@/lib/site';
 
 export const metadata = {
-  title: 'Datenschutz | TrailNorth',
-  description: 'Datenschutzseite von TrailNorth'
+  title: 'Datenschutz | ' + siteConfig.name,
+  description: 'Datenschutzseite von ' + siteConfig.name
 };
 
 export default function PrivacyPolicyPage() {

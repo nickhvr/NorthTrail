@@ -1,7 +1,8 @@
 import { getAllPosts, getPillarSummaries } from '@/lib/posts'
+import { siteConfig } from '@/lib/site'
 
 export default function sitemap() {
-  const baseUrl = 'https://north-trail-eight.vercel.app'
+  const baseUrl = siteConfig.url
 
   const posts = getAllPosts()
   const pillars = getPillarSummaries()

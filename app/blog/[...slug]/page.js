@@ -3,6 +3,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { getAllPosts, getPostBySlugSegments } from '@/lib/posts';
 import Hero from '@/components/Hero';
 import {AffiliateBox, AffiliateLink} from '@/components/AffiliateComponents';
+import { siteConfig } from '@/lib/site';
 
 const components = {
   AffiliateBox,
@@ -18,7 +19,7 @@ export function generateMetadata({ params }) {
   if (!post) return {};
 
   return {
-    title: `${post.title} | TrailNorth`,
+    title: `${post.title} | ` + siteConfig.name,
     description: post.excerpt,
   };
 }
@@ -54,7 +55,7 @@ export default function BlogPostPage({ params }) {
             {post.readTime ? <span>{post.readTime}</span> : null}
           </div>
           <h1 className="page-title" style={{fontSize:'clamp(34px,5vw,56px)', marginBottom: 12}}>{post.title}</h1>
-          <p className="muted" style={{marginTop:0}}>Von {post.author || 'TrailNorth Editorial'}</p>
+          <p className="muted" style={{marginTop:0}}>Von {post.author || 'OutdoorEinfach Editorial'}</p>
         <div className='article-content'>
           <MDXRemote source={post.content} components={components} />
         </div>

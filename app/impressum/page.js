@@ -2,7 +2,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { siteConfig } from '@/lib/site';
 
 export const metadata = {
-  title: 'Impressum | TrailNorth',
+  title: 'Impressum | ' + siteConfig.name,
   description: 'Impressum template'
 };
 
