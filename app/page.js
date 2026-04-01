@@ -25,21 +25,41 @@ export default function HomePage() {
       />
 
       <section className="section">
-        <div className="container">
-          <p className="section-kicker">Core structure</p>
-          <h2 className="section-title">Ein sauberes System für Homepage, Archiv, Themen Seiten und Beiträge</h2>
-          <p className="section-copy">Der Aufbau besteht aus einer strukturierten Homepage, Themen Seiten, die alle Beiträge beinhalten. So kannst du als Nutzer alle wichtigen Informationen zu den Themen die dich interessieren sofort finden.</p>
-          <div className="grid-3">
-            {[
-              ['Blog Seite', 'Hier werden automatisiert alle Blogartikel hohgeladen.'],
-              ['Themen Seiten', 'Diese Seiten konzentrieren sich auf die Themen nach denen du suchst!'],
-              ['Beiträge', 'Du hast gefunden was du suchst? Dann kannst du dir hier alles wichtige zu dem Thema durchlesen.']
-            ].map(([title, text]) => (
-              <div className="card" key={title}><div className="card-body"><h3>{title}</h3><p>{text}</p></div></div>
-            ))}
+  <div className="container">
+    <p className="section-kicker">Warum dieser Blog?</p>
+    <h2 className="section-title">Praxisnah statt theoretisch</h2>
+    <p className="section-copy">
+      Viele Outdoor Inhalte klingen gut, helfen dir draußen aber kaum weiter.
+      Hier findest du keine allgemeinen Ratgeber, sondern Erfahrungen aus der Praxis.
+      Der Fokus liegt darauf, typische Fehler zu vermeiden und dir genau die Informationen zu geben,
+      die du wirklich brauchst.
+    </p>
+
+    <div className="grid-3">
+      {[
+        [
+          'Echte Praxiserfahrung',
+          'Tipps basieren auf echten Situationen und nicht nur auf Theorie.'
+        ],
+        [
+          'Für Einsteiger verständlich',
+          'Klare Erklärungen ohne Fachjargon. Ideal für den Einstieg.'
+        ],
+        [
+          'Direkt umsetzbar',
+          'Konkrete Hinweise statt allgemeiner Aussagen.'
+        ]
+      ].map(([title, text]) => (
+        <div className="card" key={title}>
+          <div className="card-body">
+            <h3>{title}</h3>
+            <p>{text}</p>
           </div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
 
       <section className="section" style={{paddingTop:0}}>
         <div className="container">
