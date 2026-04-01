@@ -17,7 +17,6 @@ env:
   DEPLOYMENT_FOLDER: out
 
 jobs:
-# Please do not rename this job
   build-project:
     name: build NorthTrail
     runs-on: ubuntu-latest
@@ -30,7 +29,10 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: v22.x
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
 
       - name: Build Node assets
         env:
@@ -38,7 +40,6 @@ jobs:
           SITE_URL: ${{ inputs.site-url }}
         run: npm run build
 
-# Please do not touch the following action
       - name: Store deployment content
         uses: ionos-deploy-now/artifact-action@v1
         with:
