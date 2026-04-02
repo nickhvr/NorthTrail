@@ -3,11 +3,13 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { getAllPosts, getPostBySlugSegments } from '@/lib/posts';
 import Hero from '@/components/Hero';
 import {AffiliateBox, AffiliateLink} from '@/components/AffiliateComponents';
+import InternalLinkBox from '@/components/InternalLinkBox'
 import { siteConfig } from '@/lib/site';
 
 const components = {
   AffiliateBox,
   AffiliateLink,
+  InternalLinkBox
 };
 
 export function generateStaticParams() {
