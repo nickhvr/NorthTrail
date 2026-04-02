@@ -448,7 +448,7 @@ button { font: inherit; }
 }
 
 .breadcrumbs-light .breadcrumbs-link:hover {
-  color: var(--brand-dark);
+  color: var(--dark);
 }
 
 .breadcrumbs-light .breadcrumbs-current {
@@ -845,6 +845,18 @@ button { font: inherit; }
 
 .internal-link-box-button:hover span {
   transform: translateX(2px);
+}
+
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.load-more-finished {
+  margin: 0;
+  text-align: center;
+  opacity: 0.7;
 }
 
 @media (max-width: 900px) {
