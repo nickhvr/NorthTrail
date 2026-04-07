@@ -1,4 +1,14 @@
+'use client';
+
 import Link from "next/link";
+
+function trackAffiliateClick({ href }) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "affiliate_click",
+    affiliate_url: href,
+  });
+}
 
 export default function AffiliateLink({ href, children }) {
   return (
@@ -7,6 +17,7 @@ export default function AffiliateLink({ href, children }) {
       target="_blank"
       rel="nofollow sponsored noopener"
       className="affiliate-link"
+      onClick={() => trackAffiliateClick({ href })}
     >
       {children}
     </a>
@@ -31,6 +42,7 @@ export function AffiliateBox({ title, description, href, label = 'Empfehlung fü
               target="_blank"
               rel="nofollow sponsored noopener"
               className="affiliate-box-button"
+              onClick={() => trackAffiliateClick({ href })}
             >
               Jetzt ansehen
             </a>
