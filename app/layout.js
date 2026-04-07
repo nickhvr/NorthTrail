@@ -11,6 +11,9 @@ export const metadata = {
   icons: {
     icon: imageConfig.logo,
   },
+  verification: {
+    google: "THLoZw9uH6iFbSji5uqX4aIFQ9K1Qq2KvXi0lbzSJx8"
+  }
 };
 
 export default function RootLayout({ children }) {
