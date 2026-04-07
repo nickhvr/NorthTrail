@@ -1,11 +1,23 @@
+"use client";
+
 import Link from "next/link";
+
+function trackInternalLinkClick({ href, title, label }) {
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: "internal_link_click",
+    link_url: href,
+    link_title: title,
+    link_label: label,
+  });
+}
 
 export default function InternalLinkBox({
   title,
   description,
   href,
   trackingId,
-  label = "Weiterführender Artikel"
+  label = "Weiterführender Artikel",
 }) {
   return (
     <div
@@ -26,7 +38,14 @@ export default function InternalLinkBox({
             <Link
               href={href}
               className="internal-link-box-button"
-              >
+              onClick={() =>
+                trackInternalLinkClick({
+                  href,
+                  title,
+                  label,
+                })
+              }
+            >
               Jetzt lesen <span aria-hidden="true">→</span>
             </Link>
           </div>
