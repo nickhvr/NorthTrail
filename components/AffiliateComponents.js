@@ -10,7 +10,7 @@ function trackAffiliateClick({ href }) {
   });
 }
 
-export default function AffiliateLink({ href, children }) {
+export function AffiliateLink({ href, children }) {
   return (
     <a
       href={href}
