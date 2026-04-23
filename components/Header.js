@@ -1,11 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { siteConfig } from '@/lib/site';
 import { imageConfig } from '@/lib/image';
-import Image from "next/image";
+import Image from 'next/image';
+
+const MOBILE_BREAKPOINT = 960;
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,18 +18,36 @@ export default function Header() {
     return pathname.startsWith(path);
   }
 
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > MOBILE_BREAKPOINT) {
+        setMenuOpen(false);
+      }
+    }
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   return (
     <header className="site-header">
       <div className="container nav">
         <Link href="/" className="brand" onClick={() => setMenuOpen(false)}>
-          <span className="brand-mark"><Image
-                      src={imageConfig.logo}
-                      alt='TrailNorth Logo'
-                      width={60}
-                      height={60}
-                      priority={true}
-                      sizes="(max-width: 960px) 100vw, 40vw"
-                    />
+          <span className="brand-mark">
+            <Image
+              src={imageConfig.logo}
+              alt="TrailNorth Logo"
+              width={60}
+              height={60}
+              priority
+              sizes="(max-width: 960px) 100vw, 40vw"
+            />
           </span>
           <span>
             <strong>{siteConfig.name}</strong>
@@ -59,11 +79,10 @@ export default function Header() {
       {menuOpen && (
         <div className="mobile-nav">
           <div className="container mobile-nav-inner">
-            <Link
-              href="/blog"
-              className={isActive('/blog') ? 'active' : ''}
-              onClick={() => setMenuOpen(false)}
-            >
+            <Link href="/" className={isActive('/') ? 'active' : ''} onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+            <Link href="/blog" className={isActive('/blog') ? 'active' : ''} onClick={() => setMenuOpen(false)}>
               Blog
             </Link>
             <Link
@@ -73,7 +92,6 @@ export default function Header() {
             >
               Datenschutz
             </Link>
-
             <Link
               href="/impressum"
               className={isActive('/impressum') ? 'active' : ''}
@@ -81,7 +99,6 @@ export default function Header() {
             >
               Impressum
             </Link>
-
             <Link
               href="/cookies"
               className={isActive('/cookies') ? 'active' : ''}
